@@ -19,16 +19,30 @@ public class ArraysMultidimensionais01 {
         int pares = 0;
         int impares = 0;
 
-        for(int i = 0; i<dias.length;i++){
-            for(int j = 0; j < dias[i].length;j++){
+        /* For padrão */
+//        for(int i = 0; i<dias.length;i++){
+//            for(int j = 0; j < dias[i].length;j++){
+//
+//                if(dias[i][j] % 2 == 0){
+//                    pares++;
+//                } else {
+//                    impares++;
+//                }
+//            }
+//        }
 
-                if(dias[i][j] % 2 == 0){
+
+       /* Foreach */
+        for(int[] arr:dias){
+            for(int num:arr){
+                if(num % 2 == 0){
                     pares++;
                 } else {
                     impares++;
                 }
             }
         }
+
         System.out.println("Numeros pares: "+pares);
         System.out.println("Numeros impares: "+impares);
 
