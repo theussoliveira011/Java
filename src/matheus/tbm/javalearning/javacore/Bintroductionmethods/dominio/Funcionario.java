@@ -1,9 +1,11 @@
 package matheus.tbm.javalearning.javacore.Bintroductionmethods.dominio;
 
 public class Funcionario {
-    public String name;
-    public int age;
-    public double[] salary;
+    private String name;
+    private int age;
+    private double[] salary;
+    private double media;
+
     public void imprimir(){
         System.out.println(this.name);
         System.out.println(this.age);
@@ -12,18 +14,42 @@ public class Funcionario {
         }
     }
 
-    public double getSalary(double[] salary){
+    public void imprimeMedia(){
         if(salary == null){
-            return 0;
+            return;
         }
-
-        double media = 0;
-        for(int i = 0; i < salary.length;i++){
-            media += salary[i];
+        for(double i:salary){
+            media += i;
         }
         media /= salary.length;
-        System.out.println("=========");
-        System.out.println("Media dos salários");
-        return media;
+        System.out.println("Media salarial: R$"+media);
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double[] getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double[] salary) {
+        this.salary = salary;
+    }
+
+    public double getMedia() {
+        return this.media;
     }
 }
