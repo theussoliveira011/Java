@@ -18,9 +18,12 @@ public class EstudanteTest {
         estudante02.age = 34;
         estudante02.sex = 'F';
 
-        impressora.imprime(estudante01);
+        estudante01.imprime();
         System.out.println("=========");
-        impressora.imprime(estudante02);
+        estudante02.imprime();
+
+//        impressora.imprime(estudante01);
+//        impressora.imprime(estudante02);
 
 
     }
