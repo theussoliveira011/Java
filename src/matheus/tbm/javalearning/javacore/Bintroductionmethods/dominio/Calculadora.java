@@ -39,4 +39,13 @@ public class Calculadora {
         System.out.println("Numero impar");
         return a;
     }
+
+    public void alteraDoisNumeros(int num1, int num2){
+        num1 = 99;
+        num2 = 45;
+
+        System.out.println("Dentro do alteraDoisNumeros");
+        System.out.println("Num1: "+ num1);
+        System.out.println("Num1: "+ num2);
+    }
 }
