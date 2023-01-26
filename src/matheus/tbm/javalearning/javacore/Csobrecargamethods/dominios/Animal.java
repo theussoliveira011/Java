@@ -11,6 +11,9 @@ public class Animal {
     public Animal(){
     }
 
+    public Animal(String richard, String tubarão, int i, char f) {
+    }
+
     public void init(String name, String tipo, int quantidadePatas){
         this.name = name;
         this.tipo = tipo;

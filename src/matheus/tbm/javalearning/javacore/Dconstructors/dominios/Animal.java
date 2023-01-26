@@ -1,4 +1,4 @@
-package matheus.tbm.javalearning.javacore.Csobrecargamethods.dominios;
+package matheus.tbm.javalearning.javacore.Dconstructors.dominios;
 
 public class Animal {
 
@@ -7,22 +7,16 @@ public class Animal {
     private int quantidadePatas;
     private char sex;
 
-
     public Animal(){
+
     }
 
-    public void init(String name, String tipo, int quantidadePatas){
+    public Animal(String name, String tipo, int quantidadePatas, char sex){
         this.name = name;
         this.tipo = tipo;
         this.quantidadePatas = quantidadePatas;
-    }
-
-    public void init(String name, String tipo, int quantidadePatas, char sex){
-        this.init(name, tipo, quantidadePatas);
         this.sex = sex;
     }
-
-
     public void imprime(){
         System.out.println(this.name);
         System.out.println(this.tipo);
