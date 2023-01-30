@@ -1,6 +1,6 @@
 package matheus.tbm.javalearning.javacore.Bintroductionmethods.test;
 
-import matheus.tbm.javalearning.javacore.Bintroductionmethods.dominio.Funcionario;
+import matheus.tbm.javalearning.javacore.Bintroductionmethods.domain.Funcionario;
 
 public class FuncionarioTest {
     public static void main(String[] args) {

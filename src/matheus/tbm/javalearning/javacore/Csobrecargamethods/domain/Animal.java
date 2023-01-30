@@ -1,4 +1,4 @@
-package matheus.tbm.javalearning.javacore.Csobrecargamethods.dominios;
+package matheus.tbm.javalearning.javacore.Csobrecargamethods.domain;
 
 public class Animal {
 

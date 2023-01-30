@@ -1,6 +1,6 @@
 package matheus.tbm.javalearning.javacore.Bintroductionmethods.test;
 
-import matheus.tbm.javalearning.javacore.Bintroductionmethods.dominio.Calculadora;
+import matheus.tbm.javalearning.javacore.Bintroductionmethods.domain.Calculadora;
 
 public class CalculadoraTest {
     public static void main(String[] args) {

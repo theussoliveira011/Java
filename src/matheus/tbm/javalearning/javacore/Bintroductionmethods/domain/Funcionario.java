@@ -1,4 +1,4 @@
-package matheus.tbm.javalearning.javacore.Bintroductionmethods.dominio;
+package matheus.tbm.javalearning.javacore.Bintroductionmethods.domain;
 
 public class Funcionario {
     private String name;

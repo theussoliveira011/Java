@@ -1,6 +1,6 @@
 package matheus.tbm.javalearning.javacore.Bintroductionmethods.test;
 
-import matheus.tbm.javalearning.javacore.Bintroductionmethods.dominio.Pessoa;
+import matheus.tbm.javalearning.javacore.Bintroductionmethods.domain.Pessoa;
 
 public class PessoaTest {
     public static void main(String[] args) {

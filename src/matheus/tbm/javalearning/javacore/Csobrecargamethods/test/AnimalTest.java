@@ -1,6 +1,6 @@
 package matheus.tbm.javalearning.javacore.Csobrecargamethods.test;
 
-import matheus.tbm.javalearning.javacore.Csobrecargamethods.dominios.Animal;
+import matheus.tbm.javalearning.javacore.Csobrecargamethods.domain.Animal;
 
 public class AnimalTest {
     public static void main(String[] args) {

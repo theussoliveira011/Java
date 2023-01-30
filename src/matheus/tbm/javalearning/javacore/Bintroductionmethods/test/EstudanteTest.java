@@ -1,7 +1,7 @@
 package matheus.tbm.javalearning.javacore.Bintroductionmethods.test;
 
-import matheus.tbm.javalearning.javacore.Bintroductionmethods.dominio.Estudante;
-import matheus.tbm.javalearning.javacore.Bintroductionmethods.dominio.ImpressoraEstudante;
+import matheus.tbm.javalearning.javacore.Bintroductionmethods.domain.Estudante;
+import matheus.tbm.javalearning.javacore.Bintroductionmethods.domain.ImpressoraEstudante;
 
 public class EstudanteTest {
 
