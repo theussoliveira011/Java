@@ -154,4 +154,4 @@ Nos Métodos <strong>getters</strong> temos que informar o tipo de retorno da va
 <br>
 <strong style="font-size:30px">Lembrete: </strong> <em>Na Linguagem Java o retorno informado deve ser retornado</em>.<br>
 
-![Alt text][/image/tipoDeRetorno.png "return type"]
+![Alt text](/image/tipoDeRetorno.png "return type")
