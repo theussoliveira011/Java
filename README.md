@@ -47,3 +47,111 @@ E apartir dessa abstração pode-se criar novos modelos de moto, onde uma moto p
 <br><br><br>
 <strong>Encapsulamento</strong>: Tornar o complexo, simples e tragável.<br>
 Com o encapsulamento podemos esconder toda a complexidade do código e retornar apens o resultado esperado.
+
+# POO - Estrutural
+
+## Classe
+
+As Classes são a estrutura miníma <strong>necessária</strong> de um Código OO.<br>
+Antes de existir um <strong>Objeto</strong> é necessário existir uma classe, isso nos mostra que não é possível criar objetos sem que existam classes.
+<br><br>
+A Classe é a abstração inicial de um produto ou <em>"abstração de uma entidade"</em>. <br>
+Seja ela <strong style="font-size:24px;">Física</strong><em> (Bola, pessoa)</em> ou <strong style="font-size:24px;">Conceitual</strong> <em> (viagem, venda, estoque e etc...)</em>
+<br><br>
+<strong style="font-size:35px;">Dica</strong><br>
+Para facilitar o processo de indentificação das necessidades de um software o ponto de partida é pensar em <strong><em>Substantivos</em></strong>.
+<br>
+Ex: Imagine que precisamos desenvolver um site de vendas online, entidades como Venda, Cliente, Fornecedor, Produto.
+<br><br>
+```java
+	public class Cliente{
+    	// Implementação aqui
+	}
+
+	public class Venda{
+    	// Implementação aqui
+	}
+    
+    public class Fornecedor{
+		// Implementação aqui
+	}
+    
+    public class Produto{
+    	// Implementação aqui
+	}
+```
+<br>
+
+## O Atributo
+<br>
+Os atributos de uma classe, são suas características. Imagine nossa classe <strong>Cliente</strong>, como atributos poderiámos ter <em>Nome, CPF, Email, RA e etc...</em>
+
+```java
+public class Cliente{
+    // Características
+	int id;
+    	String nome;
+    	String CPF;
+    	String Email;
+}
+```
+<br>
+<strong>Em Java é necessário informar o tipo e variável que será criada</strong>
+<br><br>
+
+## O Método
+
+Método é um trecho de código, disponibilizado pela Classe.<br>
+É executado quando é feita uma requisição a ele.
+<br><br>
+
+<strong style="font-size:35px;">Dica</strong><br>
+Para facilitar a indentificação de um método pense em verbos.<br>
+Por exemplo, a classe <strong>Cliente</strong> pode ter os métodos <em>getNome, getCPF, getEmail, setEmail, setNome, setCPF</em>.
+
+```java
+public class Cliente{
+	// Características
+	int id;
+	String nome;
+	String CPF;
+	String email;
+    
+    // Métodos
+	// setters
+	public void setNome(String nome){
+        this.nome = nome;
+	}
+    
+    public void setCPF(String CPF){
+		this.CPF = CPF;
+	}
+    
+    public void setEmail(String email){
+        this.email = email;
+	}
+    
+    // getters
+	public int getId(){
+    	return id;    
+	}
+    
+	public String getNome(){
+        return nome;
+	}
+    
+	public String getCPF(){
+		return CPF;
+	}
+
+	public String getEmail(){
+		return email;
+	}
+}
+```
+<br>
+Nos Métodos <strong>getters</strong> temos que informar o tipo de retorno da variável.
+<br>
+<strong style="font-size:30px">Lembrete: </strong> <em>Na Linguagem Java o retorno informado deve ser retornado</em>.<br>
+
+![Alt text][/image/tipoDeRetorno.png "return type"]
