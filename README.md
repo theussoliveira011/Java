@@ -155,3 +155,87 @@ Nos Métodos <strong>getters</strong> temos que informar o tipo de retorno da va
 <strong style="font-size:30px">Lembrete: </strong> <em>Na Linguagem Java o retorno informado deve ser retornado</em>.<br>
 
 ![Alt text](/image/tipoDeRetorno.png "return type")
+<br><br>
+
+## O Construtor
+
+São métodos especiais que ficam responsáveis por criar objetos
+
+```java
+	Cliente cliente = new Cliente(); // Referência do objeto cliente à Classe Cliente. 
+
+	// Análise do trecho de código.
+	// Cliente cliente -> Cria uma variável `cliente` do tipo `Cliente`.
+	// new Cliente() -> Com o operador 'new' faz uma referência a Classe.
+```
+
+## Declarando um construtor
+
+```java
+public class Cliente { // Classe principal
+	private String nome;
+    // atributos
+	
+	// construtores
+	public Cliente(){} // Nota-se que o Construtor omite o tipo de retorno.
+	// Como o construtor é um método da própria Classe, não é necessário
+	// informar o tipo de retorno.
+	
+	// métodos abaixo
+	public String getNome(){return nome;}
+}
+```
+
+Há ainda a sobrecarga de construtores.
+
+```java
+public class Cliente { // Classe principal
+    // atributos
+	
+	// construtores
+	public Cliente(){}
+	
+	public Cliente(String nome){
+        	this.nome = nome;
+	}
+
+	public Cliente(String nome, String CPF){
+		this.nome = nome;
+		this.CPF = CPF;
+	}
+    
+    public Cliente(String nome, String CPF, String email){
+        	this.nome = nome;
+            this.CPF = CPF;
+            this.email = email;
+	}
+	
+	// métodos
+}
+```
+
+Agora se fossemos fazer refêrencia a um objeto poderiámos fazer de várias maneiras.
+
+```java
+	Cliente cliente1 = new Cliente();
+	Cliente cliente2 = new Cliente("Richarde");
+    Cliente cliente3 = new Cliente("Xanderson", "000.000.000-00");
+    Cliente cliente4 = new Cliente("Charley", "000.000.000-00", "Charley@gmail.com");
+	
+    System.out.println(cliente1.getNome()); // null
+    System.out.println(cliente2.getNome()); // "Richard"
+    System.out.println(cliente3.getNome()); // "Xanderson"
+    System.out.println(cliente4.getNome()); // "Charley"
+```
+Todas as linhas fazem instância a mesma Classe, porém são objetos diferentes na memória do computador.
+<br><br>
+
+## O Desconstrutor
+
+Esse possui o papel inverso do <strong> Construtor</strong>, serve para eliminar a referência do objeto à memória.
+
+```java
+void finalize(){
+}
+// esse método não é necessário, pesquise sobre "Garbage Collection - Java"
+```
