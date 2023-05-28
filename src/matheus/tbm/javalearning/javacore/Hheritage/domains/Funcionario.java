@@ -6,8 +6,7 @@ public class Funcionario extends Pessoa {
 
     public void imprime() {
         // this.nome, this.cpf e this.endereco;
-        super.imprime(); // -> usado para acessar o método imprime() da classe Pessoa
-        System.out.println(this.salario);
+        super.imprime(); // -> usado para acessar o método imprime() da classe Pesso
     }
 
     public double getSalario() {
