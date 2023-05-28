@@ -1,4 +1,4 @@
-package matheus.tbm.javalearning.introduction;
+package matheus.tbm.maratonaJava.introduction;
 
 public class Arrays1 {
     public static void main(String[] args) {
