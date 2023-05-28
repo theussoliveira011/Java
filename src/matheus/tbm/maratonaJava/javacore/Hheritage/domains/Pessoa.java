@@ -1,5 +1,7 @@
 package matheus.tbm.maratonaJava.javacore.Hheritage.domains;
 
+import java.util.Objects;
+
 public class Pessoa {
     protected String nome;
     protected String cpf;
@@ -41,5 +43,30 @@ public class Pessoa {
 
     public void setEndereco(Endereco endereco) {
         this.endereco = endereco;
+    }
+
+    @Override
+    public boolean equals(Object obj){
+
+        if(obj instanceof Pessoa){
+            Pessoa p = (Pessoa) obj;
+            return this.nome.equals(p.getNome());
+        }
+
+        return false;
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public String toString() {
+        return "Pessoa{" +
+                "nome='" + this.nome + '\'' +
+                ", cpf='" + this.cpf + '\'' +
+                ", endereco=" + this.getEndereco() +
+                '}';
     }
 }

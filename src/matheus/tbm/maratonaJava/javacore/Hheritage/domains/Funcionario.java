@@ -27,4 +27,15 @@ public class Funcionario extends Pessoa {
     public void setSalario(double salario) {
         this.salario = salario;
     }
+
+    @Override
+    public boolean equals(Object obj){
+
+        if(obj instanceof Funcionario){
+            Funcionario f = (Funcionario) obj;
+            return this.nome.equals(f.getNome());
+        }
+
+        return false;
+    }
 }
