@@ -79,12 +79,10 @@ public class Product {
 
         return false;
     }
-
     @Override
     public int hashCode() {
         return Objects.hash(productID, name, description, price);
     }
-
     @Override
     public String toString() {
         return "Product{" +
@@ -95,4 +93,27 @@ public class Product {
                 ", price=" + price +
                 '}';
     }
+
+    public static Product getProductByID(Product[] products, short id){
+        for(Product product : products){
+            if(product.getProductID() == id){
+                return product;
+            }
+        }
+        return null;
+    }
+
+    public static Product[] getProductsByType(Product[] products, String typeProduct){
+        Product[] listProducts = new Product[10];
+        int counter = 0;
+
+        for(int i = 0; i < products.length; i++){
+            if(products[i].getTypeProduct().equalsIgnoreCase(typeProduct)){
+                listProducts[counter] = products[i];
+                counter++;
+            }
+        }
+        return listProducts;
+    }
+
 }
