@@ -8,7 +8,8 @@ public class Product {
     private short productID;
     private static short productCounter = 0;
     private String name;
-    private String typeProduct;
+
+    private TypeProduct typeProduct;
     private String description;
     private double price;
 
@@ -22,16 +23,16 @@ public class Product {
     public Product(String name){
         this.name = name;
     }
-    public Product(String name, String typeProduct){
+    public Product(String name, TypeProduct typeProduct){
         this.name = name;
         this.typeProduct = typeProduct;
     }
-    public Product(String name, String typeProduct, String description){
+    public Product(String name, TypeProduct typeProduct, String description){
         this.name = name;
         this.typeProduct = typeProduct;
         this.description = description;
     }
-    public Product(String name, String typeProduct, String description, double price){
+    public Product(String name, TypeProduct typeProduct, String description, double price){
         this.name = name;
         this.typeProduct = typeProduct;
         this.description = description;
@@ -48,10 +49,10 @@ public class Product {
         this.name = name;
     }
 
-    public String getTypeProduct() {
+    public TypeProduct getTypeProduct() {
         return typeProduct;
     }
-    public void setTypeProduct(String typeProduct){
+    public void setTypeProduct(TypeProduct typeProduct){
         this.typeProduct = typeProduct;
     }
 
@@ -103,17 +104,17 @@ public class Product {
         return null;
     }
 
-    public static Product[] getProductsByType(Product[] products, String typeProduct){
-        Product[] listProducts = new Product[10];
-        int counter = 0;
-
-        for(int i = 0; i < products.length; i++){
-            if(products[i].getTypeProduct().equalsIgnoreCase(typeProduct)){
-                listProducts[counter] = products[i];
-                counter++;
-            }
-        }
-        return listProducts;
-    }
+//    public static Product[] getProductsByType(Product[] products, TypeProduct typeProduct){
+//        Product[] listProducts = new Product[10];
+//        int counter = 0;
+//
+//        for(int i = 0; i < products.length; i++){
+//            if(products[i].getTypeProduct().equalsIgnoreCase(typeProduct)){
+//                listProducts[counter] = products[i];
+//                counter++;
+//            }
+//        }
+//        return listProducts;
+//    }
 
 }
