@@ -79,14 +79,6 @@ public class Product {
 
 
     //unique methods
-    public static Product getProductByID(Product[] products, short id){
-        for(Product product : products){
-            if(product.getProductID() == id){
-                return product;
-            }
-        }
-        return null;
-    }
 
     //override methods
     @Override
