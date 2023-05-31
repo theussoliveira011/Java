@@ -7,30 +7,27 @@ import matheus.tbm.groceryStore.domains.Stock.Stock;
 
 public class Main {
     public static void main(String[] args) {
-        Stock stock = new Stock();
-
-        char opcao = '0';
 
         Client client = new Client();
 
-        Stock.addProduct(stock, new Product("Condicionador", TypeProduct.HIGIENE, "Item para Higienização Capilar", 10.56));
-        Stock.addProduct(stock, new Product("Trakinas", TypeProduct.BOLACHA, "Bolacha Recheada de Limão", 1.99));
-        Stock.addProduct(stock, new Product("Arroz", TypeProduct.ALIMENTO, "Arroz Integral", 9.99));
-        Stock.addProduct(stock, new Product("Arroz", TypeProduct.ALIMENTO, "Arroz Integral", 9.99));
-        Stock.addProduct(stock, new Product("Arroz", TypeProduct.ALIMENTO, "Arroz Integral", 9.99));
-        Stock.addProduct(stock, new Product("Arroz", TypeProduct.ALIMENTO, "Arroz Integral", 9.99));
+
+        Stock.addProduct(new Product("Condicionador", TypeProduct.HIGIENE, "Item para Higienização Capilar", 10.56));
+        Stock.addProduct(new Product("Trakinas", TypeProduct.BOLACHA, "Bolacha Recheada de Limão", 1.99));
+        Stock.addProduct(new Product("Arroz", TypeProduct.ALIMENTO, "Arroz Integral", 9.99));
+
+
+        Stock.removeProduct((short) 2);
+
+
+        char opcao = '0';
 
 
 //        do{
-//
-//            products = new Product[]
-//                    {
-//                            product4, product7, product5,
-//                            product, product1, product2, product3,
-//                            product6, product8, product9, product10
-//                    };
-//
-//
+//            Stock.addProduct(new Product("Feijão", TypeProduct.ALIMENTO, "Feijão de Corda", 9.99));
+//            Stock.addProduct(new Product("Farinha de Trigo", TypeProduct.FARINHA, "Farinha de Trigo", 9.99));
+//            Stock.addProduct(new Product("Maçã", TypeProduct.FRUTA, "Maçã", 9.99));
+//            Stock.addProduct(new Product("Chuchu", TypeProduct.LEGUME, "Chuchu", 9.99));
+
 //            System.out.println("BEM VINDO AO MERCADINHO DO MATHEUS");
 //
 //            Scanner inputNameUser = new Scanner(System.in);
