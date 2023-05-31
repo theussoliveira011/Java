@@ -1,17 +1,48 @@
 package matheus.tbm.groceryStore.main;
 
-import matheus.tbm.groceryStore.domains.Client;
-import matheus.tbm.groceryStore.domains.Product;
-import matheus.tbm.groceryStore.domains.TypeProduct;
+import matheus.tbm.groceryStore.domains.Client.Client;
+import matheus.tbm.groceryStore.domains.Product.Product;
+import matheus.tbm.groceryStore.domains.Product.TypeProduct;
+import matheus.tbm.groceryStore.domains.Stock.Stock;
 
 public class Main {
     public static void main(String[] args) {
+        Stock stock = new Stock();
 
-        Client client = new Client("Richard", "Barros", "Rua dos Eucaliptos n°26", (byte) 23, "29-11-1999", "matheusdesenvolvedor011@gmail.com");
+        char opcao = '0';
 
-        Product product = new Product("Trakinas", TypeProduct.BOLACHA, "Bolacha Recheada de Limão", 1.99);
-        Product product1 = new Product("Condicionador", TypeProduct.HIGIENE, "Item para Higienização Capilar", 10.56);
-        Product product2 = new Product("Arroz", TypeProduct.ALIMENTO, "Arroz Integral", 9.99);
-        Product product3 = new Product("Farinha de Trigo", TypeProduct.FARINHA, "Farinha de Trigo", 10.55);
+        Client client = new Client();
+
+        Stock.addProduct(stock, new Product("Condicionador", TypeProduct.HIGIENE, "Item para Higienização Capilar", 10.56));
+        Stock.addProduct(stock, new Product("Trakinas", TypeProduct.BOLACHA, "Bolacha Recheada de Limão", 1.99));
+        Stock.addProduct(stock, new Product("Arroz", TypeProduct.ALIMENTO, "Arroz Integral", 9.99));
+        Stock.addProduct(stock, new Product("Arroz", TypeProduct.ALIMENTO, "Arroz Integral", 9.99));
+        Stock.addProduct(stock, new Product("Arroz", TypeProduct.ALIMENTO, "Arroz Integral", 9.99));
+        Stock.addProduct(stock, new Product("Arroz", TypeProduct.ALIMENTO, "Arroz Integral", 9.99));
+
+
+//        do{
+//
+//            products = new Product[]
+//                    {
+//                            product4, product7, product5,
+//                            product, product1, product2, product3,
+//                            product6, product8, product9, product10
+//                    };
+//
+//
+//            System.out.println("BEM VINDO AO MERCADINHO DO MATHEUS");
+//
+//            Scanner inputNameUser = new Scanner(System.in);
+//            System.out.println("Qual seu nome?");
+//
+//            client.setName(inputNameUser.nextLine());
+//
+//            System.out.println("Olá " + client.getName());
+//            System.out.println("");
+//
+//
+//        } while(opcao != 0);
+
     }
 }
