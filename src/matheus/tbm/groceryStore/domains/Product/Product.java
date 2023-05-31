@@ -1,4 +1,6 @@
-package matheus.tbm.groceryStore.domains;
+package matheus.tbm.groceryStore.domains.Product;
+
+import matheus.tbm.groceryStore.domains.Stock.Stock;
 
 import java.util.Objects;
 
@@ -8,7 +10,6 @@ public class Product {
     private short productID;
     private static short productCounter = 0;
     private String name;
-
     private TypeProduct typeProduct;
     private String description;
     private double price;
@@ -38,6 +39,11 @@ public class Product {
         this.description = description;
         this.price = price;
     }
+
+    public static short getProductCounter() {
+        return productCounter;
+    }
+
     public short getProductID() {
         return productID;
     }
@@ -63,6 +69,7 @@ public class Product {
         this.description = description;
     }
 
+
     public double getPrice() {
         return price;
     }
@@ -70,6 +77,18 @@ public class Product {
         this.price = price;
     }
 
+
+    //unique methods
+    public static Product getProductByID(Product[] products, short id){
+        for(Product product : products){
+            if(product.getProductID() == id){
+                return product;
+            }
+        }
+        return null;
+    }
+
+    //override methods
     @Override
     public boolean equals(Object obj) {
 
@@ -94,27 +113,4 @@ public class Product {
                 ", price=" + price +
                 '}';
     }
-
-    public static Product getProductByID(Product[] products, short id){
-        for(Product product : products){
-            if(product.getProductID() == id){
-                return product;
-            }
-        }
-        return null;
-    }
-
-//    public static Product[] getProductsByType(Product[] products, TypeProduct typeProduct){
-//        Product[] listProducts = new Product[10];
-//        int counter = 0;
-//
-//        for(int i = 0; i < products.length; i++){
-//            if(products[i].getTypeProduct().equalsIgnoreCase(typeProduct)){
-//                listProducts[counter] = products[i];
-//                counter++;
-//            }
-//        }
-//        return listProducts;
-//    }
-
 }
