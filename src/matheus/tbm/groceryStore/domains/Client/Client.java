@@ -1,4 +1,4 @@
-package matheus.tbm.groceryStore.domains.User;
+package matheus.tbm.groceryStore.domains.Client;
 
 
 import java.time.LocalDateTime;
