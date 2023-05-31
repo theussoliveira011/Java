@@ -1,8 +1,10 @@
 package matheus.tbm.groceryStore.domains.Client;
 
 
+import java.sql.SQLOutput;
 import java.time.LocalDateTime;
 import java.util.Objects;
+import java.util.Scanner;
 
 public class Client {
 
@@ -102,6 +104,53 @@ public class Client {
         this.email = email;
     }
 
+    //unique methods
+    public String doYouHave(String data){
+        if(data == null) {
+            System.out.println("This question is necessary");
+        };
+
+        System.out.println("Do you have " + data+"?");
+        Scanner inputAnwser = new Scanner(System.in);
+        System.out.println("Please respond with Y/N: ");
+
+        String anwser = inputAnwser.nextLine();
+
+        while(!anwser.equalsIgnoreCase("y") && !anwser.equalsIgnoreCase("n")){
+            System.out.println("Por favor, digite Y ou N: ");
+            anwser = inputAnwser.nextLine();
+        }
+
+        if(anwser.equalsIgnoreCase("N")){
+            System.out.println("Não possue "+data);
+            setEmail(null);
+        }
+
+        return anwser;
+    }
+
+    public void setData(String data, String anwser){
+        switch (data){
+            case "email":
+               if(anwser.equalsIgnoreCase("Y")){
+                   System.out.println("Digite seu "+data+":");
+                   String email = new Scanner(System.in).nextLine();
+                   setEmail(email);
+               }
+               break;
+
+            case "address":
+                if (anwser.equalsIgnoreCase("Y")){
+                    System.out.println("Por favor, digite seu "+data+":");
+                    String address = new Scanner(System.in).nextLine();
+                    setAddress(address);
+                }
+                break;
+        }
+
+    }
+
+    //override methods
     @Override
     public boolean equals(Object obj) {
 
