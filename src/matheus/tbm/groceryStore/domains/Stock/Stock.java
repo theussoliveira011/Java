@@ -38,9 +38,31 @@ public class Stock {
                 PRODUCTS[i] = null;
                 break;
             }
-
         }
-
     }
 
+    public static void showProducts(){
+        for(byte i = 0; i < PRODUCTS.length; i++){
+            if(PRODUCTS[i] != null){
+                System.out.println(Stock.PRODUCTS[i].getProductID() + " " + Stock.PRODUCTS[i].getName());
+            } else {
+                break;
+            }
+        }
+    }
+
+    @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        return super.equals(obj);
+    }
+
+    @Override
+    public String toString() {
+        return super.toString();
+    }
 }

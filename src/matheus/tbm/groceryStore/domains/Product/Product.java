@@ -15,8 +15,8 @@ public class Product {
     private double price;
 
     {
-        productCounter++;
         this.productID = productCounter;
+        productCounter++;
     }
 
     //constructors
