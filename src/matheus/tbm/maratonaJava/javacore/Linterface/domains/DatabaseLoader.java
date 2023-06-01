@@ -11,4 +11,5 @@ public class DatabaseLoader implements DataLoarder, DataRemover {
     public void remove() {
         System.out.println("removing data from database");
     }
+
 }
