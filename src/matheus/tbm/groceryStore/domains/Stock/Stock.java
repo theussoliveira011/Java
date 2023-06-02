@@ -33,11 +33,19 @@ public class Stock {
             return;
         }
 
-        for(short i = 0; i < PRODUCTS.length; i++){
-            if (PRODUCTS[i].getProductID() == id){
-                PRODUCTS[i] = null;
-                break;
+        Product produto = getProductByID(id);
+        if(produto != null){
+            for(byte i = 0; i < PRODUCTS.length; i++){
+                if(PRODUCTS[i] == null){
+                    break;
+                }
+                if(PRODUCTS[i].getProductID() == produto.getProductID()){
+                    PRODUCTS[i] = new Product();
+                    break;
+                }
             }
+
+        } else {
         }
     }
 

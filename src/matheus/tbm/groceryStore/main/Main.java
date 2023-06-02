@@ -1,6 +1,7 @@
 package matheus.tbm.groceryStore.main;
 
 import matheus.tbm.groceryStore.domains.Client.Client;
+import matheus.tbm.groceryStore.domains.Menu.Options;
 import matheus.tbm.groceryStore.domains.Product.Product;
 import matheus.tbm.groceryStore.domains.Product.TypeProduct;
 import matheus.tbm.groceryStore.domains.Stock.Stock;
@@ -64,45 +65,14 @@ public class Main {
             switch(option)
             {
                 case 1:
-                    System.out.println("Digite o nome do produto que deseja adicionar");
-                    String inputNameProduct = new Scanner(System.in).nextLine();
-
-                    System.out.println("Qual o tipo de produto?");
-                    System.out.println("1 - Bolacha");
-                    System.out.println("2 - Higiene");
-                    System.out.println("3 - Alimento");
-                    System.out.println("4 - Farinha");
-                    System.out.println("5 - Fruta");
-                    System.out.println("6 - Legume");
-                    byte inputTypeProduct = new Scanner(System.in).nextByte();
-                    TypeProduct typeProduct = TypeProduct.addTypeProduct(types, inputTypeProduct);
-
-                    System.out.println("Adicione uma descrição ao produto");
-                    String inputProductDescription = new Scanner(System.in).nextLine();
-
-                    System.out.println("Qual será o preço do produto?");
-                    double inputProductPrice = new Scanner(System.in).nextDouble();
-
-                    Stock.addProduct(new Product(inputNameProduct, typeProduct, inputProductDescription, inputProductPrice));
+                    Options.addProduct(types);
                     break;
 
                 case 2:
-                    System.out.println("Qual o id do produto que deseja excluir?");
-                    Stock.showProducts();
+                    Options.removeProduct();
+                    break;
 
-                    short inputOptionToRemove = new Scanner(System.in).nextShort();
-                    if(inputOptionToRemove < 0 || inputOptionToRemove >= Stock.PRODUCTS.length || inputOptionToRemove > 126){
-                        System.out.println("Id do produto inválido");
-                        break;
-                    }
-
-                    Product optionToRemove = Stock.getProductByID(inputOptionToRemove);
-                    if(optionToRemove == null){
-                        System.out.println("Impossível remover!");
-                    } else {
-                        Stock.removeProduct(optionToRemove.getProductID());
-                        System.out.println("Produto removido com sucesso!");
-                    }
+                case 3:
 
                     break;
             }
