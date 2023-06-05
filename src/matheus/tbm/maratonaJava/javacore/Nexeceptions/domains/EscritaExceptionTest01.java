@@ -10,5 +10,10 @@ public class EscritaExceptionTest01 {
 
         funcionario.salvar();
 
+        try {
+            pessoa.salvar();
+        } catch (FileNotFoundException e){
+            e.printStackTrace();
+        }
     }
 }
