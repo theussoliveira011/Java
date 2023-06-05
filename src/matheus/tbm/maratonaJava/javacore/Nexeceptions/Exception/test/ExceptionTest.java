@@ -5,11 +5,11 @@ import java.io.IOException;
 
 public class ExceptionTest {
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws IOException {
         createNewFile();
     }
 
-    private static void createNewFile(){
+    private static void createNewFile() throws IOException {
         File file = new File("File/testFile.txt");
 
         try{
@@ -17,6 +17,7 @@ public class ExceptionTest {
             System.out.println("Arquivo criado "+isCriado);
         } catch (IOException error) {
             error.printStackTrace();
+            throw error;
         }
     }
 }

@@ -5,7 +5,6 @@ import matheus.tbm.groceryStore.domains.Menu.Options;
 import matheus.tbm.groceryStore.domains.Product.Product;
 import matheus.tbm.groceryStore.domains.Product.TypeProduct;
 import matheus.tbm.groceryStore.domains.Stock.Stock;
-
 import java.util.Scanner;
 
 public class Main {
@@ -13,8 +12,7 @@ public class Main {
 
         Client client = new Client();
 
-//        for(byte i = 0; i < Stock.PRODUCTS.length; i++) System.out.println(Stock.PRODUCTS[i]);
-//
+
 //        System.out.println("Digite seu nome:");
 //        String inputNameUser = new Scanner(System.in).nextLine();
 //        client.setName(inputNameUser);
@@ -34,6 +32,7 @@ public class Main {
 //
 
         System.out.println("BEM VINDO AO MERCADINHO DO MATHEUS");
+
         // Alimentando o "banco de dados";
         Stock.addProduct(new Product("Trakinas", TypeProduct.BOLACHA, "Bolacha Recheada de Limão", 1.99));
         Stock.addProduct(new Product("Arroz", TypeProduct.ALIMENTO, "Arroz Integral", 25));

@@ -3,11 +3,11 @@ package matheus.tbm.groceryStore.domains.Menu;
 import matheus.tbm.groceryStore.domains.Product.Product;
 import matheus.tbm.groceryStore.domains.Product.TypeProduct;
 import matheus.tbm.groceryStore.domains.Stock.Stock;
-
 import java.util.Scanner;
 
 public class Options implements Menu{
 
+    // methods;
     public static void addProduct(TypeProduct[] types){
 
         System.out.println("Digite o nome do produto que deseja adicionar");
@@ -40,7 +40,7 @@ public class Options implements Menu{
         short inputOptionToRemove = new Scanner(System.in).nextShort();
 
         if(inputOptionToRemove < 0 || inputOptionToRemove >= Stock.PRODUCTS.length || inputOptionToRemove > 126){
-            System.out.println("Id do produto inválido");
+            System.out.println("Este ID é inválido!");
             return;
         }
 
@@ -51,6 +51,21 @@ public class Options implements Menu{
         } else {
             System.out.println("Impossível remover!");
         }
+    }
+
+    public static void editProduct(){
+        System.out.println("Qual o id do produto que deseja editar?");
+        Stock.showProducts();
+
+        byte optionToEdit = new Scanner(System.in).nextByte();
+        if(optionToEdit < 0 || optionToEdit >= Stock.PRODUCTS.length){
+            System.out.println("Opção inválida!");
+            return;
+        }
+
+        Product productToEdit = Stock.getProductByID(optionToEdit);
+        System.out.println(productToEdit);
+
     }
 
 }

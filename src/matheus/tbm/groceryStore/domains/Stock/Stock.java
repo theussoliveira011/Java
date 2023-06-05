@@ -1,13 +1,13 @@
 package matheus.tbm.groceryStore.domains.Stock;
 
 import matheus.tbm.groceryStore.domains.Product.Product;
-
+import matheus.tbm.groceryStore.domains.Product.TypeProduct;
 
 public class Stock {
 
+    //attributes
     public static final Product[] PRODUCTS = new Product[100];
     private static short stockCounter;
-
 
     //unique methods
     public static Product getProductByID(short id){
@@ -27,7 +27,7 @@ public class Stock {
         PRODUCTS[stockCounter] = product;
     }
 
-    public static void removeProduct(short id){
+    public static void removeProduct(short id) {
         if(PRODUCTS == null || id < 0 || id >= PRODUCTS.length){
             System.out.println("Não é possível remover nenhum produto do Estoque");
             return;
@@ -37,7 +37,7 @@ public class Stock {
         if(produto != null){
             for(byte i = 0; i < PRODUCTS.length; i++){
                 if(PRODUCTS[i] == null){
-                    break;
+                    throw new NullPointerException("O produto é nulo!");
                 }
                 if(PRODUCTS[i].getProductID() == produto.getProductID()){
                     PRODUCTS[i] = new Product();
@@ -46,6 +46,17 @@ public class Stock {
             }
 
         } else {
+        }
+    }
+
+    public static void editProduct(short id, String name){
+        if(PRODUCTS == null || id < 0 || id >= PRODUCTS.length){
+            System.out.println("Id do produto inválido");
+        }
+
+        Product produto = getProductByID(id);
+        if(produto == null){
+            throw new NullPointerException("O produto não foi encontrado!");
         }
     }
 
